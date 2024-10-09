@@ -1,27 +1,303 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Header and Footer */
+header,
+footer {
+  background-color: #004d99;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header h1,
+footer p {
+  margin: 0;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between; /* Logo on left, nav on right */
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #004d99;
+  color: white;
+  height: 80px; /* Fixed header height */
+}
+
+/* Logo and School Name Container */
+.logo-container {
+  display: flex;
+  align-items: center; /* Align logo and name vertically */
+}
+
+.logo-container img {
+  height: 50px; /* Set height for the logo */
+  width: 50px; /* Maintain the aspect ratio */
+  margin-right: 10px; /* Space between logo and school name */
+  object-fit: contain;
+}
+
+.logo-container h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Navbar Styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between nav items */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page */
+.home-container {
+  background-image: url("image.png");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(25, 21, 21);
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  max-width: 1000px;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  color: #004d99; /* Use a color consistent with your theme */
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.1rem; /* Readable font size */
+  line-height: 1.6; /* Improved line spacing */
+  color: #333; /* Dark gray for contrast */
+  margin: 10px 0;
+}
+
+/* Image Section Styling */
+.about-images {
+  display: flex; /* Arrange images in a row */
+  gap: 30px; /* Space between images */
+  margin-top: 30px; /* Space above images */
+}
+
+.about-images img {
+  width: 100%; /* Responsive */
+  max-width: 500px; /* Limit image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+.contact-container {
+  padding: 20px;
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  color: #004d99; /* Consistent color theme */
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form fields */
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Full width */
+}
+
+textarea {
+  resize: vertical; /* Allows vertical resizing only */
+}
+
+/* Submit Button Styles */
+button {
+  background-color: #004d99;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #003366; /* Darker shade on hover */
+}
+
+/* Contact Info Section */
+.contact-info {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+  gap: 15px; /* Space between items */
+  padding: 10px; /* Add some padding */
+  background-color: #f8f9fa; /* Light background for better contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .contact-info {
+    flex-direction: row; /* Change to horizontal layout on larger screens */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .contact-info p {
+    flex: 1; /* Allow paragraphs to take equal space */
+    margin: 0; /* Remove margin to prevent excess spacing */
+  }
+}
+
+.courses-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Course Section Styles */
+.course-section {
+  background-color: #f8f9fa; /* Light background for each section */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  margin-bottom: 20px; /* Space between sections */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.course-section h2 {
+  font-size: 1.5rem;
+  color: #004d99; /* Consistent color theme */
+  margin-bottom: 10px;
+}
+
+.course-section ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+}
+
+.course-section li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px; /* Space between list items */
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-container {
+    height: 50vh;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
