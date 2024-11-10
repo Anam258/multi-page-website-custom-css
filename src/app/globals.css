@@ -59,7 +59,7 @@ header {
 /* Logo and School Name Container */
 .logo-container {
   display: flex;
-  align-items: center; /* Align logo and name vertically */
+  align-items: center;
 }
 
 .logo-container img {
@@ -218,12 +218,12 @@ button:hover {
 .contact-info {
   margin-top: 30px;
   display: flex;
-  flex-direction: column; /* Stack items vertically by default */
-  gap: 15px; /* Space between items */
-  padding: 10px; /* Add some padding */
-  background-color: #f8f9fa; /* Light background for better contrast */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h2 {
@@ -234,70 +234,71 @@ button:hover {
 /* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .contact-info {
-    flex-direction: row; /* Change to horizontal layout on larger screens */
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Center items vertically */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .contact-info p {
     flex: 1; /* Allow paragraphs to take equal space */
-    margin: 0; /* Remove margin to prevent excess spacing */
+    margin: 0;
   }
+}
+
+.courses-container {
+  padding: 20px;
+}
+
+.courses-container h1 {
+  font-size: 2rem;
+  color: #004d99;
+  margin-bottom: 20px;
 }
 
 .courses-container p {
   font-size: 1.1rem;
-  color: #333;
   margin-bottom: 30px;
 }
 
-/* Course Section Styles */
 .course-section {
-  background-color: #f8f9fa; /* Light background for each section */
-  border-radius: 8px; /* Rounded corners */
+  background-color: #f8f9fa;
+  border-radius: 8px;
   padding: 15px;
-  margin-bottom: 20px; /* Space between sections */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .course-section h2 {
   font-size: 1.5rem;
-  color: #004d99; /* Consistent color theme */
+  color: #004d99;
   margin-bottom: 10px;
 }
 
-.course-section ul {
-  list-style-type: none; /* Remove bullet points */
-  padding-left: 0; /* Remove padding */
+.course-section img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
-.course-section li {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 5px; /* Space between list items */
-}
-
-/* Footer */
-footer {
-  margin-top: 50px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .course-section {
+    display: flex;
+    align-items: center;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  .course-section h2 {
+    flex: 1;
   }
 
-  .home-container {
-    height: 50vh;
+  .course-section img {
+    width: 20%;
+    margin-right: 20px;
   }
 
-  h1 {
-    font-size: 2rem;
+  .course-section ul {
+    flex: 1;
+    padding-left: 50px;
   }
 }

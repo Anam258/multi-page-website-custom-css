@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Courses() {
   return (
@@ -8,12 +9,18 @@ export default function Courses() {
       </Head>
       <h1>Our Courses</h1>
       <p>
-        At The Muslim Generation School, we offer a comprehensive range of
-        courses designed to cater to different age groups and educational needs.
+        We offer a variety of courses designed for different age groups and
+        levels of education.
       </p>
 
       <div className="course-section">
         <h2>Pre-School</h2>
+        <Image
+          src="/images/pre-school.jpg"
+          alt="Pre-School"
+          width={400}
+          height={250}
+        />
         <ul>
           <li>Play Group</li>
           <li>Kindergarten 1</li>
@@ -23,6 +30,12 @@ export default function Courses() {
 
       <div className="course-section">
         <h2>Primary Education</h2>
+        <Image
+          src="/images/primary-education.jpg"
+          alt="Primary Education"
+          width={400}
+          height={250}
+        />
         <ul>
           <li>Grade 1</li>
           <li>Grade 2</li>
@@ -34,6 +47,12 @@ export default function Courses() {
 
       <div className="course-section">
         <h2>Secondary Education</h2>
+        <Image
+          src="/images/secondary-education.jpg"
+          alt="Secondary Education"
+          width={400}
+          height={250}
+        />
         <ul>
           <li>Grade 6</li>
           <li>Grade 7</li>
@@ -43,6 +62,12 @@ export default function Courses() {
 
       <div className="course-section">
         <h2>Board Classes</h2>
+        <Image
+          src="/images/board-classes.jpg"
+          alt="Board Classes"
+          width={400}
+          height={250}
+        />
         <ul>
           <li>Grade 9</li>
           <li>Grade 10</li>
